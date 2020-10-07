@@ -1,16 +1,19 @@
 import React, {Component} from 'react';
 
-class Table extends Component {
-    render() {
-        return (
-            <table>
-                <thead>
+const TableHeader = () => {
+    return (
+        <thead>
                 <tr>
                     <th>Name</th>
                     <th>Job</th>
                 </tr>
-                </thead>
-                <tbody>
+        </thead>
+    )
+}
+
+const TableBody = () => {
+    return (
+        <tbody>
                 <tr>
                     <td>Charlie</td>
                     <td>Janitor</td>
@@ -27,7 +30,16 @@ class Table extends Component {
                     <td>Dennis</td>
                     <td>Bartender</td>
                 </tr>
-                </tbody>
+        </tbody>
+    )
+}
+
+class Table extends Component {
+    render() {
+        return (
+            <table>
+                <TableHeader />
+                <TableBody />
             </table>
         )
     }
